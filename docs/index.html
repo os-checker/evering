@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>io-uring benches</title>
+  <title>IPC Benchmarks</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -91,20 +91,20 @@ $ cargo bench --bench ipc-benchmark # i.e. --sample-size=50 --measurement-time=3
 
 $ cargo bench --bench ipc-benchmark -- --sample-size=1000 --measurement-time=15 --save-baseline samples-size-1000
 
-$ uv run scripts/make_diagrams.py --criterion-dir docs/criterion-x86_64  --bench ipc_benchmark --outdir docs/plots --estimate median --show-only
+$ uv run scripts/make_diagrams.py --criterion-dir docs/criterion-x86_64  --bench ipc_benchmark --outdir docs/plots --estimate mean --show-only
        epoll  evering  io_uring  shmipc
-4B      5364      377      6039    1304
-64B     5396      386      5927    1288
-512B    5853      669      5598    1470
-1K      6233      976      5662    2034
-4K      9486     2687      7606    3344
-16K    19263    10382     16258   10304
-32K    30091    19438     26694   22468
-64K    52838    35266     47408   39246
-256K   79195      493     27948   10622
-512K  179216      976    135348   21625
-1M    152596     1944    104169   43912
-4M    517268     7057    351162  175264
+4B      6975      382      8023    2490
+64B     7069      389      8066    2494
+512B    7780      684      7955    2629
+1K      8182      999      8335    3964
+4K     12325     2770     10201    4459
+16K    24030    10132     20042   11753
+32K    39101    17948     29241   23414
+64K    57139    30028     48472   39638
+256K   79765      511     45429   10627
+512K  157073      997    110664   21644
+1M    154386     2002    106702   43877
+4M    530504     7628    429524  177246
 
 $ critcmp base samples-size-1000
 group                                           base                                      samples-size-1000
