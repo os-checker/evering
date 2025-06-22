@@ -106,7 +106,7 @@ $ uv run scripts/make_diagrams.py --criterion-dir docs/criterion-x86_64  --bench
 1M    154386     2002    106702   43877
 4M    530504     7628    429524  177246
 
-$ critcmp base samples-size-1000
+$ critcmp base samples-size-1000 --target-dir . # -f "evering|shmipc"
 group                                           base                                      samples-size-1000
 -----                                           ----                                      -----------------
 ipc_benchmark/ipc_benchmark_00_4B_epoll         1.00      4.5±0.12µs        ? ?/sec       1.55     7.0±13.89µs        ? ?/sec
