@@ -51,7 +51,7 @@
   <h2>Benchmarks for IPC</h2>
   <ul>
     <li>
-      <a href="./criterion-x86_64/report/index.html">Full Report</a>
+      <a href="./criterion-x86_64/report/index.html">Full Report (samples-size-1000)</a>
     </li>
     <li>
       <a href="./criterion-x86_64-base.txt">base.txt</a>
@@ -60,6 +60,14 @@
       <a href="./criterion-x86_64-samples-size-1000.txt">samples-size-1000.txt</a>
     </li>
   </ul>
+
+<h1>Benchmark Commands</h1>
+
+cargo bench --bench ipc-benchmark # i.e. --sample-size=50 --measurement-time=30 --save-baseline base
+
+cargo bench --bench ipc-benchmark -- --sample-size=1000 --measurement-time=15 --save-baseline samples-size-1000
+
+critcmp base samples-size-1000
 </body>
 
 </html>
