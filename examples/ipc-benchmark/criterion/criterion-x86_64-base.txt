@@ -1,0 +1,218 @@
+ipc_benchmark/ipc_benchmark_00_4B_epoll
+                        time:   [4.4457 µs 4.4808 µs 4.5148 µs]
+ipc_benchmark/ipc_benchmark_00_4B_evering
+                        time:   [362.91 ns 368.28 ns 373.38 ns]
+Found 2 outliers among 50 measurements (4.00%)
+  2 (4.00%) low mild
+ipc_benchmark/ipc_benchmark_00_4B_io_uring
+                        time:   [3.7623 µs 3.7771 µs 3.7957 µs]
+Found 4 outliers among 50 measurements (8.00%)
+  2 (4.00%) high mild
+  2 (4.00%) high severe
+ipc_benchmark/ipc_benchmark_00_4B_shmipc
+                        time:   [672.97 ns 681.06 ns 691.49 ns]
+Found 7 outliers among 50 measurements (14.00%)
+  3 (6.00%) high mild
+  4 (8.00%) high severe
+ipc_benchmark/ipc_benchmark_01_64B_epoll
+                        time:   [4.4859 µs 4.5290 µs 4.5748 µs]
+Found 1 outliers among 50 measurements (2.00%)
+  1 (2.00%) high mild
+ipc_benchmark/ipc_benchmark_01_64B_evering
+                        time:   [358.51 ns 362.38 ns 366.71 ns]
+ipc_benchmark/ipc_benchmark_01_64B_io_uring
+                        time:   [3.7976 µs 3.8080 µs 3.8204 µs]
+Found 8 outliers among 50 measurements (16.00%)
+  1 (2.00%) low mild
+  2 (4.00%) high mild
+  5 (10.00%) high severe
+ipc_benchmark/ipc_benchmark_01_64B_shmipc
+                        time:   [695.58 ns 700.56 ns 707.37 ns]
+Found 6 outliers among 50 measurements (12.00%)
+  1 (2.00%) high mild
+  5 (10.00%) high severe
+ipc_benchmark/ipc_benchmark_02_512B_epoll
+                        time:   [4.9401 µs 4.9549 µs 4.9683 µs]
+Found 3 outliers among 50 measurements (6.00%)
+  2 (4.00%) high mild
+  1 (2.00%) high severe
+ipc_benchmark/ipc_benchmark_02_512B_evering
+                        time:   [633.22 ns 637.45 ns 642.09 ns]
+Found 3 outliers among 50 measurements (6.00%)
+  3 (6.00%) high mild
+ipc_benchmark/ipc_benchmark_02_512B_io_uring
+                        time:   [3.9839 µs 4.0212 µs 4.0583 µs]
+Found 2 outliers among 50 measurements (4.00%)
+  2 (4.00%) high mild
+ipc_benchmark/ipc_benchmark_02_512B_shmipc
+                        time:   [955.97 ns 960.03 ns 964.15 ns]
+Found 6 outliers among 50 measurements (12.00%)
+  1 (2.00%) high mild
+  5 (10.00%) high severe
+ipc_benchmark/ipc_benchmark_03_1K_epoll
+                        time:   [5.3300 µs 5.3549 µs 5.3818 µs]
+Found 3 outliers among 50 measurements (6.00%)
+  2 (4.00%) high mild
+  1 (2.00%) high severe
+ipc_benchmark/ipc_benchmark_03_1K_evering
+                        time:   [918.03 ns 924.00 ns 930.29 ns]
+Found 4 outliers among 50 measurements (8.00%)
+  4 (8.00%) high mild
+ipc_benchmark/ipc_benchmark_03_1K_io_uring
+                        time:   [4.3169 µs 4.3540 µs 4.3972 µs]
+Found 2 outliers among 50 measurements (4.00%)
+  1 (2.00%) high mild
+  1 (2.00%) high severe
+ipc_benchmark/ipc_benchmark_03_1K_shmipc
+                        time:   [1.2080 µs 1.2192 µs 1.2320 µs]
+Found 3 outliers among 50 measurements (6.00%)
+  1 (2.00%) high mild
+  2 (4.00%) high severe
+ipc_benchmark/ipc_benchmark_04_4K_epoll
+                        time:   [8.0910 µs 8.1319 µs 8.1740 µs]
+Found 3 outliers among 50 measurements (6.00%)
+  2 (4.00%) high mild
+  1 (2.00%) high severe
+ipc_benchmark/ipc_benchmark_04_4K_evering
+                        time:   [2.4663 µs 2.4783 µs 2.4917 µs]
+Found 3 outliers among 50 measurements (6.00%)
+  3 (6.00%) high mild
+ipc_benchmark/ipc_benchmark_04_4K_io_uring
+                        time:   [6.6496 µs 6.6961 µs 6.7450 µs]
+Found 2 outliers among 50 measurements (4.00%)
+  1 (2.00%) high mild
+  1 (2.00%) high severe
+ipc_benchmark/ipc_benchmark_04_4K_shmipc
+                        time:   [2.9675 µs 2.9959 µs 3.0251 µs]
+ipc_benchmark/ipc_benchmark_05_16K_epoll
+                        time:   [17.824 µs 17.929 µs 18.064 µs]
+Found 4 outliers among 50 measurements (8.00%)
+  3 (6.00%) high mild
+  1 (2.00%) high severe
+ipc_benchmark/ipc_benchmark_05_16K_evering
+                        time:   [9.9088 µs 9.9180 µs 9.9277 µs]
+Found 7 outliers among 50 measurements (14.00%)
+  1 (2.00%) low severe
+  3 (6.00%) high mild
+  3 (6.00%) high severe
+ipc_benchmark/ipc_benchmark_05_16K_io_uring
+                        time:   [15.106 µs 15.163 µs 15.220 µs]
+Found 2 outliers among 50 measurements (4.00%)
+  2 (4.00%) high mild
+ipc_benchmark/ipc_benchmark_05_16K_shmipc
+                        time:   [9.4273 µs 9.4822 µs 9.5407 µs]
+Found 5 outliers among 50 measurements (10.00%)
+  4 (8.00%) high mild
+  1 (2.00%) high severe
+ipc_benchmark/ipc_benchmark_06_32K_epoll
+                        time:   [30.050 µs 30.184 µs 30.335 µs]
+Found 6 outliers among 50 measurements (12.00%)
+  1 (2.00%) low severe
+  1 (2.00%) low mild
+  3 (6.00%) high mild
+  1 (2.00%) high severe
+ipc_benchmark/ipc_benchmark_06_32K_evering
+                        time:   [19.586 µs 19.655 µs 19.748 µs]
+Found 8 outliers among 50 measurements (16.00%)
+  4 (8.00%) high mild
+  4 (8.00%) high severe
+ipc_benchmark/ipc_benchmark_06_32K_io_uring
+                        time:   [26.213 µs 26.316 µs 26.418 µs]
+Found 1 outliers among 50 measurements (2.00%)
+  1 (2.00%) high mild
+ipc_benchmark/ipc_benchmark_06_32K_shmipc
+                        time:   [21.588 µs 21.685 µs 21.796 µs]
+Found 1 outliers among 50 measurements (2.00%)
+  1 (2.00%) high mild
+ipc_benchmark/ipc_benchmark_07_64K_epoll
+                        time:   [56.522 µs 56.635 µs 56.750 µs]
+Found 10 outliers among 50 measurements (20.00%)
+  6 (12.00%) low severe
+  3 (6.00%) low mild
+  1 (2.00%) high mild
+ipc_benchmark/ipc_benchmark_07_64K_evering
+                        time:   [38.577 µs 38.664 µs 38.760 µs]
+Found 4 outliers among 50 measurements (8.00%)
+  1 (2.00%) high mild
+  3 (6.00%) high severe
+ipc_benchmark/ipc_benchmark_07_64K_io_uring
+                        time:   [50.861 µs 51.063 µs 51.297 µs]
+Found 6 outliers among 50 measurements (12.00%)
+  2 (4.00%) low mild
+  3 (6.00%) high mild
+  1 (2.00%) high severe
+ipc_benchmark/ipc_benchmark_07_64K_shmipc
+                        time:   [36.702 µs 36.883 µs 37.073 µs]
+ipc_benchmark/ipc_benchmark_08_256K_epoll
+                        time:   [225.00 µs 227.07 µs 228.89 µs]
+Found 5 outliers among 50 measurements (10.00%)
+  4 (8.00%) low severe
+  1 (2.00%) low mild
+ipc_benchmark/ipc_benchmark_08_256K_evering
+                        time:   [151.92 µs 152.47 µs 152.99 µs]
+Found 6 outliers among 50 measurements (12.00%)
+  4 (8.00%) low severe
+  1 (2.00%) low mild
+  1 (2.00%) high mild
+ipc_benchmark/ipc_benchmark_08_256K_io_uring
+                        time:   [213.33 µs 214.40 µs 215.39 µs]
+Found 5 outliers among 50 measurements (10.00%)
+  3 (6.00%) low severe
+  1 (2.00%) low mild
+  1 (2.00%) high severe
+ipc_benchmark/ipc_benchmark_08_256K_shmipc
+                        time:   [146.58 µs 147.35 µs 148.21 µs]
+Found 4 outliers among 50 measurements (8.00%)
+  1 (2.00%) low severe
+  1 (2.00%) high mild
+  2 (4.00%) high severe
+ipc_benchmark/ipc_benchmark_09_512K_epoll
+                        time:   [430.73 µs 436.30 µs 441.29 µs]
+Found 6 outliers among 50 measurements (12.00%)
+  4 (8.00%) low severe
+  2 (4.00%) low mild
+ipc_benchmark/ipc_benchmark_09_512K_evering
+                        time:   [299.85 µs 302.11 µs 304.18 µs]
+Found 6 outliers among 50 measurements (12.00%)
+  4 (8.00%) low severe
+  2 (4.00%) low mild
+ipc_benchmark/ipc_benchmark_09_512K_io_uring
+                        time:   [415.64 µs 421.56 µs 426.66 µs]
+Found 6 outliers among 50 measurements (12.00%)
+  4 (8.00%) low severe
+  2 (4.00%) low mild
+ipc_benchmark/ipc_benchmark_09_512K_shmipc
+                        time:   [297.71 µs 299.65 µs 301.85 µs]
+Found 6 outliers among 50 measurements (12.00%)
+  2 (4.00%) low severe
+  1 (2.00%) low mild
+  2 (4.00%) high mild
+  1 (2.00%) high severe
+ipc_benchmark/ipc_benchmark_10_1M_epoll
+                        time:   [827.22 µs 849.52 µs 870.38 µs]
+Found 8 outliers among 50 measurements (16.00%)
+  8 (16.00%) low severe
+ipc_benchmark/ipc_benchmark_10_1M_evering
+                        time:   [580.32 µs 589.21 µs 597.43 µs]
+Found 7 outliers among 50 measurements (14.00%)
+  5 (10.00%) low severe
+  2 (4.00%) low mild
+ipc_benchmark/ipc_benchmark_10_1M_io_uring
+                        time:   [799.39 µs 822.06 µs 841.99 µs]
+Found 7 outliers among 50 measurements (14.00%)
+  7 (14.00%) low severe
+ipc_benchmark/ipc_benchmark_10_1M_shmipc
+                        time:   [621.15 µs 630.75 µs 640.13 µs]
+Found 7 outliers among 50 measurements (14.00%)
+  5 (10.00%) low severe
+  1 (2.00%) low mild
+  1 (2.00%) high severe
+ipc_benchmark/ipc_benchmark_11_4M_epoll
+                        time:   [2.3878 ms 2.6838 ms 2.9572 ms]
+ipc_benchmark/ipc_benchmark_11_4M_evering
+                        time:   [1.8699 ms 2.0113 ms 2.1292 ms]
+ipc_benchmark/ipc_benchmark_11_4M_io_uring
+                        time:   [1.9706 ms 2.3180 ms 2.6129 ms]
+ipc_benchmark/ipc_benchmark_11_4M_shmipc
+                        time:   [2.1349 ms 2.3725 ms 2.5665 ms]
+

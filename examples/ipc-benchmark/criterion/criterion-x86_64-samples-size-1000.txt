@@ -1,0 +1,353 @@
+$ cargo bench --bench ipc-benchmark -- --sample-size=1000 --measurement-time=15 --save-baseline samples-size-1000
+    Finished `bench` profile [optimized + debuginfo] target(s) in 0.15s
+     Running src/bench.rs (/home/gh-zjp-CN/tmp/openoscamp-2025s/target/release/deps/ipc_benchmark-cff3ab0e907b92d2)
+Gnuplot not found, using plotters backend
+ipc_benchmark/ipc_benchmark_00_4B_epoll
+                        time:   [5.1683 µs 5.1953 µs 5.2248 µs]
+                        change: [−15.518% +0.6672% +19.489%] (p = 0.95 > 0.05)
+                        No change in performance detected.
+Found 112 outliers among 1000 measurements (11.20%)
+  46 (4.60%) high mild
+  66 (6.60%) high severe
+ipc_benchmark/ipc_benchmark_00_4B_evering
+                        time:   [372.73 ns 374.08 ns 375.45 ns]
+                        change: [−0.1135% +0.7666% +1.8445%] (p = 0.15 > 0.05)
+                        No change in performance detected.
+Found 28 outliers among 1000 measurements (2.80%)
+  1 (0.10%) low mild
+  17 (1.70%) high mild
+  10 (1.00%) high severe
+ipc_benchmark/ipc_benchmark_00_4B_io_uring
+                        time:   [5.3524 µs 5.4024 µs 5.4560 µs]
+                        change: [−9.9472% −1.1944% +8.1528%] (p = 0.81 > 0.05)
+                        No change in performance detected.
+Found 109 outliers among 1000 measurements (10.90%)
+  49 (4.90%) high mild
+  60 (6.00%) high severe
+ipc_benchmark/ipc_benchmark_00_4B_shmipc
+                        time:   [1.1656 µs 1.1772 µs 1.1899 µs]
+                        change: [−14.677% +13.240% +51.063%] (p = 0.42 > 0.05)
+                        No change in performance detected.
+Found 127 outliers among 1000 measurements (12.70%)
+  42 (4.20%) high mild
+  85 (8.50%) high severe
+ipc_benchmark/ipc_benchmark_01_64B_epoll
+                        time:   [5.1718 µs 5.1947 µs 5.2189 µs]
+                        change: [−14.479% +1.0943% +19.606%] (p = 0.91 > 0.05)
+                        No change in performance detected.
+Found 103 outliers among 1000 measurements (10.30%)
+  43 (4.30%) high mild
+  60 (6.00%) high severe
+ipc_benchmark/ipc_benchmark_01_64B_evering
+                        time:   [382.60 ns 383.93 ns 385.29 ns]
+                        change: [−2.3850% −1.5947% −0.8568%] (p = 0.00 < 0.05)
+                        Change within noise threshold.
+Found 18 outliers among 1000 measurements (1.80%)
+  13 (1.30%) high mild
+  5 (0.50%) high severe
+ipc_benchmark/ipc_benchmark_01_64B_io_uring
+                        time:   [5.3686 µs 5.4186 µs 5.4710 µs]
+                        change: [−10.252% −1.4172% +7.5558%] (p = 0.77 > 0.05)
+                        No change in performance detected.
+Found 112 outliers among 1000 measurements (11.20%)
+  44 (4.40%) high mild
+  68 (6.80%) high severe
+ipc_benchmark/ipc_benchmark_01_64B_shmipc
+                        time:   [1.1717 µs 1.1820 µs 1.1932 µs]
+                        change: [−25.892% −0.2836% +32.207%] (p = 0.99 > 0.05)
+                        No change in performance detected.
+Found 129 outliers among 1000 measurements (12.90%)
+  48 (4.80%) high mild
+  81 (8.10%) high severe
+ipc_benchmark/ipc_benchmark_02_512B_epoll
+                        time:   [5.6086 µs 5.6326 µs 5.6578 µs]
+                        change: [−18.569% −0.3983% +19.481%] (p = 0.96 > 0.05)
+                        No change in performance detected.
+Found 110 outliers among 1000 measurements (11.00%)
+  37 (3.70%) high mild
+  73 (7.30%) high severe
+ipc_benchmark/ipc_benchmark_02_512B_evering
+                        time:   [663.37 ns 665.36 ns 667.45 ns]
+                        change: [−1.1248% −0.3654% +0.4301%] (p = 0.37 > 0.05)
+                        No change in performance detected.
+Found 52 outliers among 1000 measurements (5.20%)
+  2 (0.20%) low severe
+  36 (3.60%) high mild
+  14 (1.40%) high severe
+ipc_benchmark/ipc_benchmark_02_512B_io_uring
+                        time:   [5.2409 µs 5.2832 µs 5.3274 µs]
+                        change: [−9.2301% +0.2088% +9.9992%] (p = 0.97 > 0.05)
+                        No change in performance detected.
+Found 108 outliers among 1000 measurements (10.80%)
+  50 (5.00%) high mild
+  58 (5.80%) high severe
+ipc_benchmark/ipc_benchmark_02_512B_shmipc
+                        time:   [1.3185 µs 1.3296 µs 1.3420 µs]
+                        change: [−24.242% −0.1099% +29.785%] (p = 1.00 > 0.05)
+                        No change in performance detected.
+Found 126 outliers among 1000 measurements (12.60%)
+  45 (4.50%) high mild
+  81 (8.10%) high severe
+ipc_benchmark/ipc_benchmark_03_1K_epoll
+                        time:   [5.9913 µs 6.0181 µs 6.0470 µs]
+                        change: [−14.060% +1.3683% +20.138%] (p = 0.88 > 0.05)
+                        No change in performance detected.
+Found 117 outliers among 1000 measurements (11.70%)
+  45 (4.50%) high mild
+  72 (7.20%) high severe
+ipc_benchmark/ipc_benchmark_03_1K_evering
+                        time:   [968.70 ns 971.71 ns 974.81 ns]
+                        change: [−1.5672% −0.7335% +0.1098%] (p = 0.09 > 0.05)
+                        No change in performance detected.
+Found 59 outliers among 1000 measurements (5.90%)
+  4 (0.40%) low severe
+  39 (3.90%) high mild
+  16 (1.60%) high severe
+ipc_benchmark/ipc_benchmark_03_1K_io_uring
+                        time:   [5.4018 µs 5.4397 µs 5.4801 µs]
+                        change: [−10.485% +0.5418% +13.030%] (p = 0.93 > 0.05)
+                        No change in performance detected.
+Found 134 outliers among 1000 measurements (13.40%)
+  52 (5.20%) high mild
+  82 (8.20%) high severe
+ipc_benchmark/ipc_benchmark_03_1K_shmipc
+                        time:   [1.8142 µs 1.8298 µs 1.8467 µs]
+                        change: [+5.5725% +37.618% +84.549%] (p = 0.03 < 0.05)
+                        Performance has regressed.
+Found 120 outliers among 1000 measurements (12.00%)
+  43 (4.30%) high mild
+  77 (7.70%) high severe
+ipc_benchmark/ipc_benchmark_04_4K_epoll
+                        time:   [9.1684 µs 9.2101 µs 9.2543 µs]
+                        change: [−16.589% +0.1394% +19.779%] (p = 0.99 > 0.05)
+                        No change in performance detected.
+Found 98 outliers among 1000 measurements (9.80%)
+  39 (3.90%) high mild
+  59 (5.90%) high severe
+ipc_benchmark/ipc_benchmark_04_4K_evering
+                        time:   [2.6362 µs 2.6456 µs 2.6562 µs]
+                        change: [−2.0313% −0.5919% +0.8587%] (p = 0.44 > 0.05)
+                        No change in performance detected.
+Found 97 outliers among 1000 measurements (9.70%)
+  13 (1.30%) low severe
+  52 (5.20%) high mild
+  32 (3.20%) high severe
+ipc_benchmark/ipc_benchmark_04_4K_io_uring
+                        time:   [7.3625 µs 7.3940 µs 7.4304 µs]
+                        change: [−10.761% −0.4245% +11.417%] (p = 0.94 > 0.05)
+                        No change in performance detected.
+Found 160 outliers among 1000 measurements (16.00%)
+  38 (3.80%) high mild
+  122 (12.20%) high severe
+ipc_benchmark/ipc_benchmark_04_4K_shmipc
+                        time:   [3.2238 µs 3.2499 µs 3.2847 µs]
+                        change: [−23.709% −8.2307% +10.291%] (p = 0.38 > 0.05)
+                        No change in performance detected.
+Found 119 outliers among 1000 measurements (11.90%)
+  46 (4.60%) high mild
+  73 (7.30%) high severe
+ipc_benchmark/ipc_benchmark_05_16K_epoll
+                        time:   [18.927 µs 19.002 µs 19.079 µs]
+                        change: [−16.670% −1.5190% +15.722%] (p = 0.86 > 0.05)
+                        No change in performance detected.
+Found 104 outliers among 1000 measurements (10.40%)
+  1 (0.10%) low severe
+  17 (1.70%) low mild
+  30 (3.00%) high mild
+  56 (5.60%) high severe
+ipc_benchmark/ipc_benchmark_05_16K_evering
+                        time:   [10.321 µs 10.360 µs 10.400 µs]
+                        change: [−1.2356% +0.8724% +3.0487%] (p = 0.43 > 0.05)
+                        No change in performance detected.
+Found 118 outliers among 1000 measurements (11.80%)
+  49 (4.90%) low severe
+  10 (1.00%) low mild
+  34 (3.40%) high mild
+  25 (2.50%) high severe
+ipc_benchmark/ipc_benchmark_05_16K_io_uring
+                        time:   [16.071 µs 16.146 µs 16.225 µs]
+                        change: [−13.367% −0.8224% +12.080%] (p = 0.91 > 0.05)
+                        No change in performance detected.
+Found 170 outliers among 1000 measurements (17.00%)
+  14 (1.40%) low severe
+  24 (2.40%) low mild
+  26 (2.60%) high mild
+  106 (10.60%) high severe
+ipc_benchmark/ipc_benchmark_05_16K_shmipc
+                        time:   [10.126 µs 10.162 µs 10.200 µs]
+                        change: [−8.4101% +0.8952% +11.329%] (p = 0.87 > 0.05)
+                        No change in performance detected.
+Found 118 outliers among 1000 measurements (11.80%)
+  13 (1.30%) low severe
+  9 (0.90%) low mild
+  42 (4.20%) high mild
+  54 (5.40%) high severe
+Benchmarking ipc_benchmark/ipc_benchmark_06_32K_epoll: Warming up for 3.0000 s
+Warning: Unable to complete 1000 samples in 15.0s. You may wish to increase target time to 15.3s, enable flat sampling, or reduce sample count to 700.
+ipc_benchmark/ipc_benchmark_06_32K_epoll
+                        time:   [29.796 µs 30.000 µs 30.205 µs]
+                        change: [−20.418% −0.2019% +24.680%] (p = 0.99 > 0.05)
+                        No change in performance detected.
+Found 126 outliers among 1000 measurements (12.60%)
+  62 (6.20%) low mild
+  20 (2.00%) high mild
+  44 (4.40%) high severe
+ipc_benchmark/ipc_benchmark_06_32K_evering
+                        time:   [19.565 µs 19.651 µs 19.737 µs]
+                        change: [−4.2851% −1.5378% +1.5608%] (p = 0.29 > 0.05)
+                        No change in performance detected.
+Found 146 outliers among 1000 measurements (14.60%)
+  97 (9.70%) low severe
+  17 (1.70%) low mild
+  27 (2.70%) high mild
+  5 (0.50%) high severe
+ipc_benchmark/ipc_benchmark_06_32K_io_uring
+                        time:   [26.495 µs 26.604 µs 26.716 µs]
+                        change: [−8.0509% +0.6889% +10.692%] (p = 0.89 > 0.05)
+                        No change in performance detected.
+Found 144 outliers among 1000 measurements (14.40%)
+  51 (5.10%) low severe
+  12 (1.20%) low mild
+  26 (2.60%) high mild
+  55 (5.50%) high severe
+ipc_benchmark/ipc_benchmark_06_32K_shmipc
+                        time:   [22.375 µs 22.459 µs 22.545 µs]
+                        change: [−8.0015% −0.5432% +7.9350%] (p = 0.91 > 0.05)
+                        No change in performance detected.
+Found 139 outliers among 1000 measurements (13.90%)
+  63 (6.30%) low severe
+  8 (0.80%) low mild
+  34 (3.40%) high mild
+  34 (3.40%) high severe
+Benchmarking ipc_benchmark/ipc_benchmark_07_64K_epoll: Warming up for 3.0000 s
+Warning: Unable to complete 1000 samples in 15.0s. You may wish to increase target time to 29.7s, enable flat sampling, or reduce sample count to 500.
+ipc_benchmark/ipc_benchmark_07_64K_epoll
+                        time:   [53.489 µs 53.861 µs 54.234 µs]
+                        change: [−11.966% +0.8517% +15.767%] (p = 0.91 > 0.05)
+                        No change in performance detected.
+Found 148 outliers among 1000 measurements (14.80%)
+  115 (11.50%) low mild
+  10 (1.00%) high mild
+  23 (2.30%) high severe
+Benchmarking ipc_benchmark/ipc_benchmark_07_64K_evering: Warming up for 3.0000 s
+Warning: Unable to complete 1000 samples in 15.0s. You may wish to increase target time to 19.8s, enable flat sampling, or reduce sample count to 610.
+ipc_benchmark/ipc_benchmark_07_64K_evering
+                        time:   [36.447 µs 36.718 µs 36.989 µs]
+                        change: [−5.7701% −1.4957% +2.9141%] (p = 0.50 > 0.05)
+                        No change in performance detected.
+Found 198 outliers among 1000 measurements (19.80%)
+  195 (19.50%) low mild
+  2 (0.20%) high mild
+  1 (0.10%) high severe
+Benchmarking ipc_benchmark/ipc_benchmark_07_64K_io_uring: Warming up for 3.0000 s
+Warning: Unable to complete 1000 samples in 15.0s. You may wish to increase target time to 26.5s, enable flat sampling, or reduce sample count to 530.
+ipc_benchmark/ipc_benchmark_07_64K_io_uring
+                        time:   [48.202 µs 48.548 µs 48.895 µs]
+                        change: [−9.4105% +0.9066% +13.674%] (p = 0.88 > 0.05)
+                        No change in performance detected.
+Found 158 outliers among 1000 measurements (15.80%)
+  134 (13.40%) low mild
+  7 (0.70%) high mild
+  17 (1.70%) high severe
+Benchmarking ipc_benchmark/ipc_benchmark_07_64K_shmipc: Warming up for 3.0000 s
+Warning: Unable to complete 1000 samples in 15.0s. You may wish to increase target time to 20.1s, enable flat sampling, or reduce sample count to 610.
+ipc_benchmark/ipc_benchmark_07_64K_shmipc
+                        time:   [39.258 µs 39.538 µs 39.826 µs]
+                        change: [−8.2042% +0.3584% +9.8315%] (p = 0.94 > 0.05)
+                        No change in performance detected.
+Found 209 outliers among 1000 measurements (20.90%)
+  100 (10.00%) low severe
+  55 (5.50%) low mild
+  40 (4.00%) high mild
+  14 (1.40%) high severe
+ipc_benchmark/ipc_benchmark_08_256K_epoll
+                        time:   [79.368 µs 79.765 µs 80.178 µs]
+                        change: [+50.583% +54.282% +58.130%] (p = 0.00 < 0.05)
+                        Performance has regressed.
+Found 14 outliers among 1000 measurements (1.40%)
+  1 (0.10%) low mild
+  8 (0.80%) high mild
+  5 (0.50%) high severe
+ipc_benchmark/ipc_benchmark_08_256K_evering
+                        time:   [505.61 ns 511.39 ns 519.73 ns]
+                        change: [−1.0091% +0.5746% +2.5142%] (p = 0.54 > 0.05)
+                        No change in performance detected.
+Found 106 outliers among 1000 measurements (10.60%)
+  13 (1.30%) high mild
+  93 (9.30%) high severe
+ipc_benchmark/ipc_benchmark_08_256K_io_uring
+                        time:   [44.079 µs 45.429 µs 46.780 µs]
+Found 1 outliers among 1000 measurements (0.10%)
+  1 (0.10%) high mild
+ipc_benchmark/ipc_benchmark_08_256K_shmipc
+                        time:   [10.526 µs 10.627 µs 10.779 µs]
+Found 152 outliers among 1000 measurements (15.20%)
+  41 (4.10%) low severe
+  58 (5.80%) low mild
+  33 (3.30%) high mild
+  20 (2.00%) high severe
+ipc_benchmark/ipc_benchmark_09_512K_epoll
+                        time:   [154.03 µs 157.07 µs 160.12 µs]
+ipc_benchmark/ipc_benchmark_09_512K_evering
+                        time:   [992.44 ns 997.68 ns 1.0033 µs]
+Found 97 outliers among 1000 measurements (9.70%)
+  19 (1.90%) high mild
+  78 (7.80%) high severe
+ipc_benchmark/ipc_benchmark_09_512K_io_uring
+                        time:   [107.02 µs 110.66 µs 114.36 µs]
+Found 11 outliers among 1000 measurements (1.10%)
+  11 (1.10%) high mild
+ipc_benchmark/ipc_benchmark_09_512K_shmipc
+                        time:   [21.516 µs 21.644 µs 21.781 µs]
+Found 136 outliers among 1000 measurements (13.60%)
+  28 (2.80%) low severe
+  53 (5.30%) low mild
+  36 (3.60%) high mild
+  19 (1.90%) high severe
+ipc_benchmark/ipc_benchmark_10_1M_epoll
+                        time:   [153.70 µs 154.39 µs 155.17 µs]
+Found 85 outliers among 1000 measurements (8.50%)
+  1 (0.10%) low mild
+  42 (4.20%) high mild
+  42 (4.20%) high severe
+ipc_benchmark/ipc_benchmark_10_1M_evering
+                        time:   [1.9778 µs 2.0026 µs 2.0391 µs]
+Found 83 outliers among 1000 measurements (8.30%)
+  16 (1.60%) high mild
+  67 (6.70%) high severe
+ipc_benchmark/ipc_benchmark_10_1M_io_uring
+                        time:   [105.21 µs 106.70 µs 108.65 µs]
+Found 70 outliers among 1000 measurements (7.00%)
+  3 (0.30%) low mild
+  37 (3.70%) high mild
+  30 (3.00%) high severe
+ipc_benchmark/ipc_benchmark_10_1M_shmipc
+                        time:   [43.676 µs 43.878 µs 44.090 µs]
+Found 111 outliers among 1000 measurements (11.10%)
+  33 (3.30%) low severe
+  38 (3.80%) low mild
+  22 (2.20%) high mild
+  18 (1.80%) high severe
+ipc_benchmark/ipc_benchmark_11_4M_epoll
+                        time:   [527.74 µs 530.50 µs 533.33 µs]
+Found 7 outliers among 1000 measurements (0.70%)
+  6 (0.60%) high mild
+  1 (0.10%) high severe
+ipc_benchmark/ipc_benchmark_11_4M_evering
+                        time:   [7.3414 µs 7.6285 µs 8.0711 µs]
+Found 158 outliers among 1000 measurements (15.80%)
+  33 (3.30%) high mild
+  125 (12.50%) high severe
+ipc_benchmark/ipc_benchmark_11_4M_io_uring
+                        time:   [412.55 µs 429.52 µs 447.97 µs]
+Found 164 outliers among 1000 measurements (16.40%)
+  47 (4.70%) high mild
+  117 (11.70%) high severe
+ipc_benchmark/ipc_benchmark_11_4M_shmipc
+                        time:   [175.94 µs 177.25 µs 178.86 µs]
+Found 111 outliers among 1000 measurements (11.10%)
+  14 (1.40%) low severe
+  5 (0.50%) low mild
+  50 (5.00%) high mild
+  42 (4.20%) high severe
+
