@@ -52,7 +52,7 @@
 <body>
   <script> hljs.highlightAll(); </script>
 
-  <h2>Benchmarks for IPC</h2>
+  <h2>Benchmarks for IPC among evering, shmipc, epoll, and io_uring</h2>
   <ul>
     <li>
       <a href="./criterion-x86_64/report/index.html">Full Report (samples-size-1000)</a>
@@ -65,7 +65,7 @@
     </li>
   </ul>
 
-<h1>Benchmark Commands</h1>
+<h2>Benchmark Commands</h2>
 
 <pre><code class="html">
 $ cargo bench --bench ipc-benchmark # i.e. --sample-size=50 --measurement-time=30 --save-baseline base
@@ -73,6 +73,56 @@ $ cargo bench --bench ipc-benchmark # i.e. --sample-size=50 --measurement-time=3
 $ cargo bench --bench ipc-benchmark -- --sample-size=1000 --measurement-time=15 --save-baseline samples-size-1000
 
 $ critcmp base samples-size-1000
+group                                           base                                      samples-size-1000
+-----                                           ----                                      -----------------
+ipc_benchmark/ipc_benchmark_00_4B_epoll         1.00      4.5±0.12µs        ? ?/sec       1.55     7.0±13.89µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_00_4B_evering       1.00   368.2±12.90ns        ? ?/sec       1.04   382.1±55.40ns        ? ?/sec
+ipc_benchmark/ipc_benchmark_00_4B_io_uring      1.00      3.9±0.22µs        ? ?/sec       2.07      8.0±8.56µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_00_4B_shmipc        1.00   720.0±87.04ns        ? ?/sec       3.46      2.5±8.38µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_01_64B_epoll        1.00      4.5±0.14µs        ? ?/sec       1.55     7.1±14.27µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_01_64B_evering      1.00   366.4±13.68ns        ? ?/sec       1.06   389.8±28.84ns        ? ?/sec
+ipc_benchmark/ipc_benchmark_01_64B_io_uring     1.00      3.9±0.28µs        ? ?/sec       2.07      8.1±8.15µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_01_64B_shmipc       1.00   735.3±81.59ns        ? ?/sec       3.39      2.5±8.39µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_02_512B_epoll       1.00      5.0±0.08µs        ? ?/sec       1.56     7.8±16.80µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_02_512B_evering     1.00   640.3±13.08ns        ? ?/sec       1.07   684.2±56.90ns        ? ?/sec
+ipc_benchmark/ipc_benchmark_02_512B_io_uring    1.00      4.1±0.15µs        ? ?/sec       1.95      8.0±9.12µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_02_512B_shmipc      1.00   977.5±52.17ns        ? ?/sec       2.69      2.6±8.40µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_03_1K_epoll         1.00      5.4±0.12µs        ? ?/sec       1.52     8.2±16.71µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_03_1K_evering       1.00   926.4±15.78ns        ? ?/sec       1.08   999.8±97.38ns        ? ?/sec
+ipc_benchmark/ipc_benchmark_03_1K_io_uring      1.00      4.4±0.21µs        ? ?/sec       1.88     8.3±11.81µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_03_1K_shmipc        1.00  1252.7±112.55ns        ? ?/sec      3.16     4.0±14.45µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_04_4K_epoll         1.00      8.2±0.20µs        ? ?/sec       1.51    12.3±24.99µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_04_4K_evering       1.00      2.5±0.05µs        ? ?/sec       1.11      2.8±0.45µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_04_4K_io_uring      1.00      6.7±0.18µs        ? ?/sec       1.51    10.2±13.26µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_04_4K_shmipc        1.00      3.0±0.09µs        ? ?/sec       1.48      4.5±8.35µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_05_16K_epoll        1.00     18.0±0.41µs        ? ?/sec       1.33    24.0±45.72µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_05_16K_evering      1.00      9.9±0.09µs        ? ?/sec       1.02     10.1±2.29µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_05_16K_io_uring     1.00     15.2±0.25µs        ? ?/sec       1.32    20.0±29.39µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_05_16K_shmipc       1.00      9.5±0.19µs        ? ?/sec       1.24    11.8±13.37µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_06_32K_epoll        1.00     30.2±0.66µs        ? ?/sec       1.30   39.1±102.43µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_06_32K_evering      1.10     19.8±0.44µs        ? ?/sec       1.00     17.9±5.91µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_06_32K_io_uring     1.00     26.3±0.42µs        ? ?/sec       1.11    29.2±33.73µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_06_32K_shmipc       1.00     21.8±0.43µs        ? ?/sec       1.07    23.4±19.73µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_07_64K_epoll        1.00     55.6±3.33µs        ? ?/sec       1.03    57.1±92.16µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_07_64K_evering      1.29     38.7±0.59µs        ? ?/sec       1.00    30.0±15.10µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_07_64K_io_uring     1.06     51.4±1.72µs        ? ?/sec       1.00    48.5±66.70µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_07_64K_shmipc       1.00     37.0±0.68µs        ? ?/sec       1.07    39.6±43.22µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_08_256K_epoll       2.62   209.3±44.76µs        ? ?/sec       1.00     79.8±6.56µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_08_256K_evering     288.79  147.7±22.12µs        ? ?/sec      1.00  511.4±117.18ns        ? ?/sec
+ipc_benchmark/ipc_benchmark_08_256K_io_uring    4.59   208.3±30.73µs        ? ?/sec       1.00    45.4±21.78µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_08_256K_shmipc      13.80  146.7±21.38µs        ? ?/sec       1.00     10.6±2.11µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_09_512K_epoll       2.49  391.1±114.82µs        ? ?/sec       1.00   157.1±49.05µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_09_512K_evering     285.01  284.4±62.39µs        ? ?/sec      1.00   997.7±88.10ns        ? ?/sec
+ipc_benchmark/ipc_benchmark_09_512K_io_uring    3.38  373.9±113.15µs        ? ?/sec       1.00   110.7±59.20µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_09_512K_shmipc      13.61  294.6±64.15µs        ? ?/sec       1.00     21.6±2.13µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_10_1M_epoll         4.64  716.2±313.90µs        ? ?/sec       1.00   154.4±11.93µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_10_1M_evering       258.61 517.9±181.77µs        ? ?/sec      1.00      2.0±0.51µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_10_1M_io_uring      6.60  704.2±289.47µs        ? ?/sec       1.00   106.7±28.11µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_10_1M_shmipc        13.08 573.8±198.65µs        ? ?/sec       1.00     43.9±3.33µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_11_4M_epoll         3.21  1700.8±1671.54µs        ? ?/sec     1.00   530.5±45.16µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_11_4M_evering       178.88 1364.6±1073.46µs        ? ?/sec    1.00      7.6±6.06µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_11_4M_io_uring      3.13  1343.8±1559.20µs        ? ?/sec     1.00  429.5±286.36µs        ? ?/sec
+ipc_benchmark/ipc_benchmark_11_4M_shmipc        8.51  1509.0±1381.64µs        ? ?/sec     1.00   177.2±23.59µs        ? ?/sec
 </code></pre>
 
 </body>
