@@ -98,6 +98,7 @@ def parse_reports(dir: str) -> list[Report]:
         report = Report.parse(name, report_dir)
         if report is not None:
             reports.append(report)
+    reports.sort(key=lambda x: x.name)
     return reports
 
 
