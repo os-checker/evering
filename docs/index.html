@@ -44,6 +44,16 @@
     a:hover {
       text-decoration: underline;
     }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* 图片之间的间距 */
+    }
+    .container img {
+        width: 48%; /* 每张图片的宽度 */
+        height: auto;
+    }
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
@@ -55,7 +65,7 @@
   <h2>Benchmarks for IPC among evering, shmipc, epoll, and io_uring</h2>
   <ul>
     <li>
-      <a href="./criterion-x86_64/report/index.html">Full Report (samples-size-1000)</a>
+      <a href="./criterion-x86_64/report/index.html">full report (samples-size-1000)</a>
     </li>
     <li>
       <a href="./criterion-x86_64-base.txt">base.txt</a>
@@ -65,12 +75,36 @@
     </li>
   </ul>
 
+<h2>Benchmark Plots</h2>
+
+<div class="container">
+<img src="./plots/ipc_benchmark_all.svg" alt="ipc_benchmark_all">
+<img src="./plots/ipc_benchmark_first_5.svg" alt="ipc_benchmark_first_5">
+<img src="./plots/ipc_benchmark_mid_5.svg" alt="ipc_benchmark_mid_5">
+<img src="./plots/ipc_benchmark_last_5.svg" alt="ipc_benchmark_last_5">
+</div>
+
 <h2>Benchmark Commands</h2>
 
 <pre><code class="html">
 $ cargo bench --bench ipc-benchmark # i.e. --sample-size=50 --measurement-time=30 --save-baseline base
 
 $ cargo bench --bench ipc-benchmark -- --sample-size=1000 --measurement-time=15 --save-baseline samples-size-1000
+
+$ uv run scripts/make_diagrams.py --criterion-dir docs/criterion-x86_64  --bench ipc_benchmark --outdir docs/plots --estimate median --show-only
+      shmipc  io_uring  evering   epoll
+64K     1304      6039      377    5364
+256K    1288      5927      386    5396
+512B    1470      5598      669    5853
+512K    2034      5662      976    6233
+32K     3344      7606     2687    9486
+4B     10304     16258    10382   19263
+1K     22468     26694    19438   30091
+4K     39246     47408    35266   52838
+1M     10622     27948      493   79195
+4M     21625    135348      976  179216
+64B    43912    104169     1944  152596
+16K   175264    351162     7057  517268
 
 $ critcmp base samples-size-1000
 group                                           base                                      samples-size-1000

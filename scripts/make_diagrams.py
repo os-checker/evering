@@ -76,7 +76,7 @@ class Report:
         mat = name_pattern.match(name)
         if mat is None:
             return
-        with open(P.join(dir, "new/estimates.json")) as f:
+        with open(P.join(dir, "samples-size-1000/estimates.json")) as f:
             estimates = json.load(f)
         return Report(
             name=name,
